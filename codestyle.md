@@ -28,3 +28,19 @@
 ```css
 .my-class {font-style:italic; width:10px; font-weight:bold; height:100px;}
 ```
+
+### Комментирование и разделение на блоки
+
+Правила относящиеся к конкретному участку макета (например, список новостей) необходимо озаглавить комментарием с использованием `/** двойной звездочки **/` с отступом от предыдущего блока в две пустые строки. Пример правильного оформления блока стилей:
+
+```css
+/** Список новостей **/
+.news-list {display:block; margin-top:10px;}
+    .news-list > .item + .item {margin-top:10px; font-size:1.3em;}
+    .news-list > .item:last-child {color:#f00;}
+
+
+/** Детальная новость **/
+.detail-news {display:block;}
+    .detail-news span {color:#ff0; font-weight:bold;}
+```
