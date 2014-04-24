@@ -1,0 +1,40 @@
+body {font-size:14px; line-height:1.2; font-family:Arial;}
+
+
+/** Links **/
+a, .link {color:#000;}
+a:hover, button:hover, button.invert, a.invert {text-decoration:none;}
+a, button, a.invert:hover, button.invert:hover {text-decoration:underline; cursor:pointer;}
+
+
+/** Fix some reset **/
+b, strong {font-weight:bold;}
+i, em {font-style:italic;}
+
+
+/** Clear **/
+.clear {clear:both; display:block;}
+
+
+/** Clearfix **/
+.clearfix:before, .clearfix:after {content:""; display:table;}
+.clearfix:after {clear:both;}
+.clearfix{zoom:1;}
+
+
+/** Remove textarea scrollbars and disabled resize **/
+textarea {resize:none; overflow-y:auto;}
+
+
+/** Page background always in full-height **/
+html.full-height, html.full-height body {position:relative; height:100%;}
+html.full-height #page {min-height:100%;}
+
+
+/** Fix buttons in old firefox **/
+button {border:0 none; outline:none; margin:0;}
+button::-moz-focus-inner {border:0;}
+
+
+/** Disable user select **/
+.no-selection {-webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:moz-none; -ms-user-select:none; user-select:none;}
