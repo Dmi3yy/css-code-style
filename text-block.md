@@ -52,6 +52,13 @@ _Данные правила распространяются на все кон
 </div>
 ```
 
+Обязательно нужно предусмотреть автоматические отступы у списков и таблиц:
+```css
+.text-block * + ul {margin-top:10px;}
+.text-block * + ol {margin-top:10px;}
+.text-block * + table {margin-top:10px;}
+```
+
 ### Оформление изображений
 Изображения выравниваются в трех направлениях с помощью трех классов:
 - Влево: `visual-left`
@@ -72,7 +79,13 @@ _Данные правила распространяются на все кон
 ```
 ```css
 .text-block img.stylized {border:5px solid #fff;}
-.text-block img.stylized.visual-left {float:left; margin:0 20px 12px 0;}
-.text-block img.stylized.visual-center {display:block; margin:0 auto 0 auto;}
-.text-block img.stylized.visual-right {float:right; margin:0 0 12px 20px;}
+.text-block img.visual-left {float:left; margin:0 20px 12px 0;}
+.text-block img.visual-center {display:block; margin:0 auto 0 auto;}
+.text-block img.visual-right {float:right; margin:0 0 12px 20px;}
+```
+
+Так же желательно стилизовать `float:left/right` изображения, например так:
+```css
+.text-block img[style*="float:left"], .text-block img[style*="float: left"] {float:left; margin:0 20px 12px 0;}
+.text-block img[style*="float:right"], .text-block img[style*="float: right"] {float:right; margin:0 0 12px 20px;}
 ```
